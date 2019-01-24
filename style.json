@@ -1,0 +1,622 @@
+{
+  "version": 8,
+  "center": [
+    0,
+    0
+  ],
+  "zoom": 5,
+  "sources": {
+    "vstd": {
+      "type": "vector",
+      "tiles": [
+        "http://vectortiles.xyz:8765/zxy/tapioca/{z}/{x}/{y}.pbf"
+      ],
+      "attribution": "OpenStreetMap contributors",
+      "maxzoom": 15
+    },
+    "6": {
+      "type": "vector",
+      "tiles": [
+        "https://hfu.github.io/6/{z}/{x}/{y}.pbf"
+      ],
+      "maxzoom": 6
+    }
+  },
+  "sprite": "http://vectortiles.xyz:8765/sprite",
+  "glyphs": "http://vectortiles.xyz:8765/fonts/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "rgb(245, 245, 245)"
+      }
+    },
+    {
+      "id": "Coastline",
+      "type": "line",
+      "source": "vstd",
+      "source-layer": "Coastline",
+      "paint": {
+        "line-color": "rgb(20, 90, 255)"
+      }
+    },
+    {
+      "id": "pg-nature",
+      "type": "fill",
+      "source": "vstd",
+      "source-layer": "nature",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-color": "rgb(240, 244, 195)"
+      }
+    },
+    {
+      "id": "pg-water",
+      "type": "fill",
+      "source": "vstd",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-color": "rgb(187, 222, 251)"
+      }
+    },
+    {
+      "id": "pg-boundary",
+      "type": "fill",
+      "source": "vstd",
+      "source-layer": "boundary",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-color": "rgb(255, 205, 210)"
+      }
+    },
+    {
+      "id": "pg-road",
+      "type": "fill",
+      "source": "vstd",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-color": "rgb(178, 223, 219)"
+      }
+    },
+    {
+      "id": "pg-railway",
+      "type": "fill",
+      "source": "vstd",
+      "source-layer": "railway",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-color": "rgb(225, 190, 231)"
+      }
+    },
+    {
+      "id": "pg-route",
+      "type": "fill",
+      "source": "vstd",
+      "source-layer": "route",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-color": "rgb(248, 187, 208)"
+      }
+    },
+    {
+      "id": "pg-structure",
+      "type": "fill",
+      "source": "vstd",
+      "source-layer": "structure",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-color": "rgb(255, 249, 196)"
+      }
+    },
+    {
+      "id": "pg-building",
+      "type": "fill",
+      "source": "vstd",
+      "source-layer": "building",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-color": "rgb(255, 224, 178)"
+      }
+    },
+    {
+      "id": "pg-place",
+      "type": "fill",
+      "source": "vstd",
+      "source-layer": "place",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-color": "rgb(197, 202, 233)"
+      }
+    },
+    {
+      "id": "pg-other",
+      "type": "fill",
+      "source": "vstd",
+      "source-layer": "other",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-color": "rgb(209, 196, 233)"
+      }
+    },
+    {
+      "id": "ls-nature",
+      "type": "line",
+      "source": "vstd",
+      "source-layer": "nature",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgb(205, 220, 57)"
+      }
+    },
+    {
+      "id": "ls-water",
+      "type": "line",
+      "source": "vstd",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgb(33, 150, 243)"
+      }
+    },
+    {
+      "id": "ls-boundary",
+      "type": "line",
+      "source": "vstd",
+      "source-layer": "boundary",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgb(244, 67, 54)"
+      }
+    },
+    {
+      "id": "ls-road",
+      "type": "line",
+      "source": "vstd",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgb(0, 150, 136)"
+      }
+    },
+    {
+      "id": "ls-railway",
+      "type": "line",
+      "source": "vstd",
+      "source-layer": "railway",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgb(156, 39, 176)"
+      }
+    },
+    {
+      "id": "ls-route",
+      "type": "line",
+      "source": "vstd",
+      "source-layer": "route",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgb(233, 30, 99)"
+      }
+    },
+    {
+      "id": "ls-structure",
+      "type": "line",
+      "source": "vstd",
+      "source-layer": "structure",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgb(255, 235, 54)"
+      }
+    },
+    {
+      "id": "ls-building",
+      "type": "line",
+      "source": "vstd",
+      "source-layer": "building",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgb(255, 152, 0)"
+      }
+    },
+    {
+      "id": "ls-place",
+      "type": "line",
+      "source": "vstd",
+      "source-layer": "place",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgb(63, 81, 181)"
+      }
+    },
+    {
+      "id": "ls-other",
+      "type": "line",
+      "source": "vstd",
+      "source-layer": "other",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgb(103, 58, 183)"
+      }
+    },
+    {
+      "id": "pt-nature",
+      "type": "circle",
+      "source": "vstd",
+      "source-layer": "nature",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ]
+      ],
+      "paint": {
+        "circle-color": "rgb(130, 119, 23)",
+        "circle-radius": 2.5
+      }
+    },
+    {
+      "id": "pt-water",
+      "type": "circle",
+      "source": "vstd",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ]
+      ],
+      "paint": {
+        "circle-color": "rgb(13, 71, 161)",
+        "circle-radius": 2.5
+      }
+    },
+    {
+      "id": "pt-boundary",
+      "type": "circle",
+      "source": "vstd",
+      "source-layer": "boundary",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ]
+      ],
+      "paint": {
+        "circle-color": "rgb(183, 28, 28)",
+        "circle-radius": 2.5
+      }
+    },
+    {
+      "id": "pt-road",
+      "type": "circle",
+      "source": "vstd",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ]
+      ],
+      "paint": {
+        "circle-color": "rgb(0, 77, 64)",
+        "circle-radius": 2.5
+      }
+    },
+    {
+      "id": "pt-railway",
+      "type": "circle",
+      "source": "vstd",
+      "source-layer": "railway",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ]
+      ],
+      "paint": {
+        "circle-color": "rgb(74, 20, 140)",
+        "circle-radius": 2.5
+      }
+    },
+    {
+      "id": "pt-route",
+      "type": "circle",
+      "source": "vstd",
+      "source-layer": "route",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ]
+      ],
+      "paint": {
+        "circle-color": "rgb(136, 14, 79)",
+        "circle-radius": 2.5
+      }
+    },
+    {
+      "id": "pt-structure",
+      "type": "circle",
+      "source": "vstd",
+      "source-layer": "structure",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ]
+      ],
+      "paint": {
+        "circle-color": "rgb(245, 127, 23)",
+        "circle-radius": 2.5
+      }
+    },
+    {
+      "id": "pt-building",
+      "type": "circle",
+      "source": "vstd",
+      "source-layer": "building",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ]
+      ],
+      "paint": {
+        "circle-color": "rgb(230, 81, 0)",
+        "circle-radius": 2.5
+      }
+    },
+    {
+      "id": "pt-place",
+      "type": "circle",
+      "source": "vstd",
+      "source-layer": "place",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ]
+      ],
+      "paint": {
+        "circle-color": "rgb(26, 35, 126)",
+        "circle-radius": 2.5
+      }
+    },
+    {
+      "id": "pt-other",
+      "type": "circle",
+      "source": "vstd",
+      "source-layer": "other",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ]
+      ],
+      "paint": {
+        "circle-color": "rgb(49, 27, 146)",
+        "circle-radius": 2.5
+      }
+    },
+    {
+      "id": "symbol-place",
+      "type": "symbol",
+      "source": "vstd",
+      "source-layer": "place",
+      "maxzoom": 11,
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "sans"
+        ]
+      },
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(238, 238, 238)",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "6.line",
+      "type": "line",
+      "source": "6",
+      "source-layer": "6",
+      "paint": {
+        "line-color": "rgba(136, 136, 136, 1)",
+        "line-width": 0.5
+      }
+    },
+    {
+      "id": "6.symbol",
+      "type": "symbol",
+      "source": "6",
+      "source-layer": "6",
+      "minzoom": 3,
+      "maxzoom": 18,
+      "layout": {
+        "text-field": "{w3n}",
+        "text-size": {
+          "stops": [
+            [
+              4,
+              10
+            ],
+            [
+              8,
+              120
+            ]
+          ]
+        },
+        "text-font": [
+          "sans"
+        ]
+      },
+      "paint": {
+        "text-color": "rgba(136, 136, 136, 1)"
+      }
+    }
+  ]
+}
