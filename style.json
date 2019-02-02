@@ -9,7 +9,7 @@
     "vstd": {
       "type": "vector",
       "tiles": [
-        "http://vectortiles.xyz:8765/zxy/tapioca/{z}/{x}/{y}.pbf"
+        "https://vectortiles.xyz/zxy/tapioca/{z}/{x}/{y}.pbf"
       ],
       "attribution": "OpenStreetMap contributors",
       "maxzoom": 15
@@ -23,7 +23,7 @@
     }
   },
   "sprite": "http://vectortiles.xyz:8765/sprite",
-  "glyphs": "http://vectortiles.xyz:8765/fonts/{fontstack}/{range}.pbf",
+  "glyphs": "https://vectortiles.xyz/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
