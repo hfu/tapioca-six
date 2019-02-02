@@ -596,6 +596,14 @@
       "source-layer": "6",
       "minzoom": 3,
       "maxzoom": 18,
+      "filter": [
+        "all",
+        [
+          "==",
+          "capital",
+          "yes"
+        ]
+      ],
       "layout": {
         "text-field": "{w3n}",
         "text-size": {
