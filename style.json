@@ -567,6 +567,14 @@
       "source": "vstd",
       "source-layer": "place",
       "maxzoom": 11,
+      "filter": [
+        "all",
+        [
+          "==",
+          "capital",
+          "yes"
+        ]
+      ],
       "layout": {
         "text-field": "{name}",
         "text-font": [
@@ -596,14 +604,6 @@
       "source-layer": "6",
       "minzoom": 3,
       "maxzoom": 18,
-      "filter": [
-        "all",
-        [
-          "==",
-          "capital",
-          "yes"
-        ]
-      ],
       "layout": {
         "text-field": "{w3n}",
         "text-size": {
