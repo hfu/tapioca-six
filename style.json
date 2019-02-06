@@ -20,6 +20,10 @@
         "https://hfu.github.io/6/{z}/{x}/{y}.pbf"
       ],
       "maxzoom": 6
+    },
+    "extent": {
+      "type": "geojson",
+      "data": "https://hfu.github.io/tapioca-extent/extent.geojson"
     }
   },
   "sprite": "http://vectortiles.xyz:8765/sprite",
@@ -624,6 +628,15 @@
       },
       "paint": {
         "text-color": "rgba(136, 136, 136, 1)"
+      }
+    },
+    {
+      "id": "extent",
+      "type": "line",
+      "source": "extent",
+      "paint": {
+        "line-color": "rgb(0, 150, 136)",
+        "line-width": 4
       }
     }
   ]
