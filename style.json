@@ -76,7 +76,16 @@
         ]
       ],
       "paint": {
-        "fill-color": "rgb(187, 222, 251)"
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "natural"
+          ],
+          "wetland",
+          "rgb(227, 242, 253)",
+          "rgb(187, 222, 251)"
+        ]
       }
     },
     {
