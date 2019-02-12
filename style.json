@@ -26,7 +26,7 @@
       "data": "https://hfu.github.io/tapioca-extent/extent.geojson"
     }
   },
-  "sprite": "http://vectortiles.xyz:8765/sprite",
+  "sprite": "https://hfu.github.io/unite-sprite/sprite",
   "glyphs": "https://vectortiles.xyz/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
