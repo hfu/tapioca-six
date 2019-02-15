@@ -17,16 +17,21 @@ body { margin: 0; top: 0; bottom: 0; width: 100%; }
 <script>
 d3.json('https://hfu.github.io/onyx-tapioca/style.json')
 .then(style => {
+  style.sources.6 = {
+    type: 'vector',
+    tiles: ['https://hfu.github.io/6/{z}/{x}/{y}.pbf'],
+    maxzoom: 6
+  }
   console.log(style)
-})
-map = new mapboxgl.Map({
-  container: 'map', 
-  style: 'style.json', 
-  attributionControl: true, hash: true,
-  localIdeographFontFamily: 'sans'
-})
-map.on('load', function() {
-  map.addControl(new mapboxgl.NavigationControl())
+  map = new mapboxgl.Map({
+    container: 'map', 
+    style: style, 
+    attributionControl: true, hash: true,
+    localIdeographFontFamily: 'sans'
+  })
+  map.on('load', function() {
+    map.addControl(new mapboxgl.NavigationControl())
+  })
 })
 </script>
 </body>
