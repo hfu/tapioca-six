@@ -22,6 +22,25 @@ d3.json('https://hfu.github.io/onyx-tapioca/style.json')
     tiles: ['https://hfu.github.io/6/{z}/{x}/{y}.pbf'],
     maxzoom: 6
   }
+  style.layers.push({
+    id: '6.line', type: 'line', source: '6', 'source-layer': '6',
+    paint: {
+      'line-color': 'rgba(136, 136, 136, 1)',
+      'line-width': 0.5
+    }
+  })
+  style.layers.push({
+    id: '6.symbol', type: 'symbol', source: '6', 'source-layer': '6',
+    minzoom: 3, maxzoom: 18, layout: {
+      'text-field': '{w3n}',
+      'text-size': {
+        stops: [[4, 10], [8, 120]],
+        'text-font': 'sans'
+      }
+    }, paint: {
+      'text-color': 'rgba(136, 136, 136, 1)'
+    }
+  })
   console.log(style)
   map = new mapboxgl.Map({
     container: 'map', 
