@@ -15,8 +15,10 @@ body { margin: 0; top: 0; bottom: 0; width: 100%; }
 <body>
 <div id="map"></div>
 <script>
-style = d3.json('https://hfu.github.io/onyx-tapioca/style.json')
-console.log(style)
+d3.json('https://hfu.github.io/onyx-tapioca/style.json')
+.then(style => {
+  console.log(style)
+})
 map = new mapboxgl.Map({
   container: 'map', 
   style: 'style.json', 
